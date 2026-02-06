@@ -2,13 +2,20 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "go",
+      "name": "Attach to Chrome",
+      "port": 9222,
+      "request": "attach",
+      "type": "chrome",
+      "webRoot": "${workspaceFolder}"
+    },
+
+    {
+      "type": "node",
       "name": "Launch",
       "request": "launch",
-      "mode": "auto",
       "program": "${workspaceFolder}/cmd/dependabot",
       "envFile": "${workspaceFolder}/.env",
-      "args": ["update", "go_modules", "dependabot/cli"],
+      "args": ["update", "go_modules", "dependabot/cli"]
     }
   ]
 }
